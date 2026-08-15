@@ -2,14 +2,21 @@
 
 Плагин Claude Code со скиллом `glavred`: ревью и редактура постов для соцсетей по методу Максима Ильяхова. Работает по-русски.
 
-**Установка** — склонировать репозиторий и подключить скилл к Claude Code напрямую:
+**Установка** через маркетплейс — в Claude Code:
+
+```
+/plugin marketplace add Londeren/claude-plugins
+/plugin install glavred-skill@Londeren
+```
+
+Если в сводке установки написано `Run /reload-plugins to activate.` — выполнить эту команду.
+
+Или напрямую, без маркетплейса: склонировать репозиторий и подключить скилл к Claude Code:
 
 ```bash
 git clone https://github.com/Londeren/glavred-skill.git
 mkdir -p ~/.claude/skills && ln -s "$PWD/glavred-skill/skills/glavred" ~/.claude/skills/glavred
 ```
-
-Установка через маркетплейс (`/plugin marketplace add Londeren/claude-plugins`, затем `/plugin install glavred-skill@Londeren`) станет доступна после публикации — записи про этот плагин в маркетплейсе пока нет.
 
 **Разбор** — находки по уровням (смысл → подача → текст → формат) с серьёзностью, цитатой из поста и правилом метода. **Рерайт** — диагностика, переписанная версия, список правок; факты и голос автора сохраняются.
 
